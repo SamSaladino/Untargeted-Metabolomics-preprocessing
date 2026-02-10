@@ -20,6 +20,7 @@
 
 # RStudio files
 .Rproj.user/
+*.Rproj
 
 # produced vignettes
 vignettes/*.html
@@ -39,11 +40,34 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 
-# pkgdown site
-docs/
+# pkgdown site (but keep our docs/ directory)
+_pkgdown.yml
+docs/_site/
 
 # translation temp files
 po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# Workflow-specific ignores
+# Results directory (generated outputs)
+results/plots/
+results/tables/
+results/objects/
+
+# Raw data files (user-provided, potentially large)
+data/raw/*.csv
+data/raw/*.mzML
+data/raw/*.mzXML
+data/raw/*.txt
+
+# Keep the example metadata but ignore user data
+data/metadata/*.csv
+!data/metadata/sample_metadata.csv
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db

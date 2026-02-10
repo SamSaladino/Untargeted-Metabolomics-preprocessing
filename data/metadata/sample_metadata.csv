@@ -1,0 +1,16 @@
+Sample_ID,Group,Batch,QC
+Sample_001,Control,1,Sample
+Sample_002,Control,1,Sample
+Sample_003,Control,1,Sample
+Sample_004,Treatment,1,Sample
+Sample_005,Treatment,1,Sample
+Sample_006,Treatment,1,Sample
+QC_001,QC,1,QC
+Sample_007,Control,2,Sample
+Sample_008,Control,2,Sample
+Sample_009,Control,2,Sample
+Sample_010,Treatment,2,Sample
+Sample_011,Treatment,2,Sample
+Sample_012,Treatment,2,Sample
+QC_002,QC,2,QC
+Blank_001,Blank,1,Blank
