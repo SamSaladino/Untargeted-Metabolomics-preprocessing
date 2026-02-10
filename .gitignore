@@ -40,8 +40,9 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 
-# pkgdown site
-docs/
+# pkgdown site (but keep our docs/ directory)
+_pkgdown.yml
+docs/_site/
 
 # translation temp files
 po/*~
@@ -51,7 +52,9 @@ rsconnect/
 
 # Workflow-specific ignores
 # Results directory (generated outputs)
-results/
+results/plots/
+results/tables/
+results/objects/
 
 # Raw data files (user-provided, potentially large)
 data/raw/*.csv
