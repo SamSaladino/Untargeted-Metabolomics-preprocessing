@@ -20,6 +20,7 @@
 
 # RStudio files
 .Rproj.user/
+*.Rproj
 
 # produced vignettes
 vignettes/*.html
@@ -47,3 +48,23 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# Workflow-specific ignores
+# Results directory (generated outputs)
+results/
+
+# Raw data files (user-provided, potentially large)
+data/raw/*.csv
+data/raw/*.mzML
+data/raw/*.mzXML
+data/raw/*.txt
+
+# Keep the example metadata but ignore user data
+data/metadata/*.csv
+!data/metadata/sample_metadata.csv
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
