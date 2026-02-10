@@ -181,9 +181,9 @@ message("✓ PCA plots saved")
 
 message("\nGenerating heatmap...")
 
-# Select top variable features for heatmap (e.g., top 50)
+# Select top variable features for heatmap
 feature_vars <- apply(exprs(metaboset_normalized), 1, var, na.rm = TRUE)
-top_features <- names(sort(feature_vars, decreasing = TRUE)[1:min(50, nrow(metaboset_normalized))])
+top_features <- names(sort(feature_vars, decreasing = TRUE)[1:min(N_TOP_FEATURES_HEATMAP, nrow(metaboset_normalized))])
 
 # Prepare heatmap data
 heatmap_data <- exprs(metaboset_normalized)[top_features, ]
@@ -210,7 +210,7 @@ pheatmap(
   clustering_distance_cols = "euclidean",
   clustering_method = "ward.D2",
   color = colorRampPalette(c("blue", "white", "red"))(100),
-  main = "Heatmap of Top 50 Variable Features",
+  main = paste0("Heatmap of Top ", N_TOP_FEATURES_HEATMAP, " Variable Features"),
   fontsize = 8,
   fontsize_col = 6
 )

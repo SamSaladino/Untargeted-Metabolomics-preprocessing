@@ -183,7 +183,11 @@ if (comparison_mode == "pairwise") {
     mutate(
       A = (Mean_Group1 + Mean_Group2) / 2,  # Average expression
       M = Log2_FC,  # Log2 fold change
-      Color = Color
+      Color = case_when(
+        Regulation == "Up" ~ "Up-regulated",
+        Regulation == "Down" ~ "Down-regulated",
+        TRUE ~ "Not Significant"
+      )
     )
   
   # Create MA plot

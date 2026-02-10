@@ -85,6 +85,9 @@ DPI <- 300                                 # Resolution for saved plots
 # Color schemes
 COLOR_PALETTE <- "Set1"                    # RColorBrewer palette name
 
+# Heatmap parameters
+N_TOP_FEATURES_HEATMAP <- 50               # Number of top variable features for heatmap
+
 # =============================================================================
 # ADVANCED PARAMETERS
 # =============================================================================
